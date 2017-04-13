@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>show and hide password on click </title>
+  </head>
+  <body>
+    <form>
+      <input type="password" name="" value="" id="my-input">
+    </form>
+    <button type="button" name="button"id="my-button">Show Password</button>
+  </body>
+
+  <script>
+    var myButton = document.getElementById('my-button'),
+
+    myInput = document.getElementById('my-input');
+
+    myButton.onclick = function () {
+
+      if (this.textContent === 'Show Password') {
+
+        myInput.setAttribute('type', 'text');
+
+        this.textContent = 'Hide Password';
+
+      }else {
+        myInput.setAttribute('type', 'Password');
+
+        this.textContent = 'Show Password';
+      }
+
+    };
+  </script>
+</html>

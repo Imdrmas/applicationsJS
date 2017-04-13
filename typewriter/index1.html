@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>type writer effecrt on text</title>
+  </head>
+  <body>
+
+<p id="type"> </p>
+
+<button id="button">Start Type</button>
+    <script>
+
+      var myText = 'hello frmo google web hello frmo google web hello frmo google web',
+
+
+
+      i = 0,
+
+      myButton = document.getElementById('button');
+
+      myButton.onclick = function () {
+
+      var typeWriter = setInterval(function () {
+
+      document.getElementById('type').textContent += myText[i];
+
+      i++;
+
+      if (i > myText.length - 1){
+
+        clearInterval(typeWriter);
+      }
+
+  
+
+    }, 100);
+    };
+    </script>
+
+  </body>
+</html>

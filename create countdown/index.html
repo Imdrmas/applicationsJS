@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Countdown timer</title>
+  </head>
+  <body>
+<div id="countdown">
+
+</div>
+
+
+<script>
+
+var seconds = 11,
+
+countDiv   = document.getElementById('countdown'),
+
+secondPass,
+
+countDown  = setInterval(function () {
+  'use strict';
+
+  secondPass();
+
+}, 1000);
+
+function secondPass() {
+  'use strict'
+
+  var minutes = Math.floor(seconds / 60),
+
+  remSeconds = seconds % 60;
+
+  if (seconds < 10 ){
+    remSeconds = "0" + remSeconds;
+  }
+
+  countDiv.innerHTML = minutes + ":" + remSeconds;
+
+  if (seconds > 0) {
+
+    seconds = seconds - 1;
+  }
+  else {
+    clearInterval(countDown);
+
+    countDiv.innerHTML = "Done"
+  }
+}
+</script>
+  </body>
+</html>

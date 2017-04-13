@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>generate random seral number</title>
+  </head>
+  <body>
+    <button id"generate" onclick="generateSerial()">generate</button>
+    <div id="serial"></div>
+
+
+
+<script>
+  function generateSerial() {
+    var chars = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+
+    serialLength = 6,
+    randomSerial = '',
+
+    i,
+
+    randomNumber;
+
+    for (i = 0; i < serialLength; i = i + 1){
+      randomNumber = Math.floor(Math.random() * chars.length);
+
+      randomSerial += chars.substring(randomNumber, randomNumber + 1);
+    }
+    document.getElementById('serial').innerHTML = randomSerial;
+  }
+</script>
+  </body>
+</html>

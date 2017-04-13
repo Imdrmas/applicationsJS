@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>check if url hash contains text</title>
+  </head>
+  <body>
+    <form>
+      <input id="ourinput" type="text" placeholder="type your name">
+    </form>
+
+
+<script>
+var ourInput = document.getElementById('ourinput');
+
+'use strict';
+
+ourInput.onfocus = function () {
+
+
+  if (this.placeholder === 'type your name') {
+
+    this.placeholder = '';
+  }
+
+};
+
+var ourInput = document.getElementById('ourinput');
+ourInput.onblur = function () {
+  'use strict';
+
+  if (this.placeholder === '') {
+
+    this.placeholder = 'type your name';
+  }
+
+};
+</script>
+  </body>
+</html>

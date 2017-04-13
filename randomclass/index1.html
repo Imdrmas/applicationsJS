@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>random class on body</title>
+    <style media="screen">
+      .class-five h1{
+        color: red;
+      }
+      .class-five p{
+        color: red;
+      }
+
+      .class-one h1{
+        color: blue;
+      }
+      .class-one p{
+        color: blue;
+      }
+
+      .class-two h1{
+        color: green;
+      }
+      .class-two p{
+        color: green;
+      }
+
+      .class-tree h1{
+        color: pink;
+      }
+      .class-tree p{
+        color: pink;
+      }
+
+      .class-four h1{
+        color: yellow;
+      }
+      .class-four p{
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    
+<h1 class=""> hello world from desing web</h1>
+<p class=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<script>
+  var classList = ["class-one", "class-two", "class-tree", "class-four", "class-five"],
+
+  randomkey = Math.floor(Math.random() * classList.length);
+
+  document.body.setAttribute('class', classList[randomkey]);
+</script>
+  </body>
+</html>

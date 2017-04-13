@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<!-- <button onclick="myFunction()">Try it</button> -->
+
+<p id="demo" style="width:300px; height:200px; background: blue; color:#DDD; text-align: center; padding-top:50px; font-size:30px; border: 15px solid #DDD;"></p>
+
+<script>
+
+window.onload = function () {
+    var greeting;
+    var time = new Date().getHours();
+    if (time < 12) {
+        greeting = "Good Morning";
+    } else if (time < 20) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo").innerHTML = greeting;
+}
+
+
+</script>
+
+</body>
+</html>
